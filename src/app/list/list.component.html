@@ -1,0 +1,26 @@
+
+
+<h3 style="text-align: center;">Data List</h3>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.mobile }}</td>
+        <td>
+          <button (click)="editItem(item.id)">Edit</button>
+          <button (click)="onDelete(item.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<h1>CRUD OPERATION</h1>
+<form #myForm="ngForm" (submit)="onSubmit()" class="form-container">
+  <!-- Id data-->
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="text" name="id" id="id" placeholder="Please enter your ID here" [(ngModel)]="id" required>
+    
+  </div>
+
+  <!-- name data-->
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter Full Name" [(ngModel)]="name" required>
+  </div>
+
+  <!-- mobile number data-->
+  <div class="form-group">
+    <label for="mobile">Mobile:</label>
+    <input type="tel" id="mobile" name="mob" placeholder="Enter Mobile Number" [(ngModel)]="mobile" required
+      pattern="[0-9]{10}">
+
+  </div>
+  <button type="submit" [disabled]="!myForm.valid" class="btn">Add</button>
+</form>
